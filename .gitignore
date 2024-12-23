@@ -1,0 +1,18 @@
+# Byte-compiled files
+*.pyc
+*.pyo
+__pycache__/
+
+# Environment files
+.env
+
+# Django static and media files
+/static/
+/media/
+
+# SQLite database files
+*.sqlite3
+
+# System files
+.DS_Store
+Thumbs.db
