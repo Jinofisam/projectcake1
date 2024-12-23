@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    background: url(../image/orderedbg2.png) ;
+    background-repeat: no-repeat;
+    background-size: 1570px 668px;    
+    
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 4%;
+    background-color: black;
+}
+
+header a {
+    color: #88ecb8;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+}
+header a:hover{
+    color: #41905b;
+}
+
+.order-success {
+    background: rgba(255, 255, 255, .1);
+    border:rgba(255, 255, 255, .2) ;
+    box-shadow: 0 0 10px rgba(0, 0 0, .2);
+    backdrop-filter: blur(50px);
+    color: #000000;
+    padding: 50px;
+    border-radius: 10px;
+    border-top: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    margin-bottom: 146px;
+}
+ 
+.order-success .title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.order-details p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.footer {
+    background-color: #000000;
+    color: #c9d1d1;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer a {
+    color: #88ecb8;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #41905b;
+}

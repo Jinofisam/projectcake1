@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/order.css' %}">
+</head>
+<body>
+    <header>
+        <a href="/">Home</a>
+        <a href="/">Orders</a>
+        <a href="#footer">Contact</a>
+    </header>
+
+    <main>
+        <section class="order-page">
+            <div class="product-details">
+                <div class="product-image">
+                    <img src="../static/image/CAKEpro (9).png" alt="Product Image">
+                </div>
+                <div class="product-info">
+                    <h1 class="product-title" name="cake_name">Vanilla cake</h1>
+                    <p class="product-description">Delight in the timeless elegance of our Classic Vanilla Cake, a perfect treat for any celebration. Baked with the finest vanilla and premium ingredients, this cake is soft, fluffy, and filled with a smooth, creamy vanilla buttercream. Each layer offers a delicate, moist crumb that melts in your mouth, complemented by the light, airy frosting. Elegantly finished with a touch of white chocolate curls or your choice of decorations, this vanilla cake is pure simplicity at its best. Available in various sizes and customizable with flavors, toppings, and decorations to suit your special occasion.</p>
+                    <p class="product-price" name="price">RS:1000</p>
+                </div>
+            </div>
+
+            <form  method="POST" class="post-form" action="ordersave/">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="hidden" name="cake_name" value="Vanilla Cake">
+                <input type="hidden" name="price" value="1000">
+                <h2>Customize Your Order</h2>
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity"  min="1" value="1" required name="quantity">
+                </div>
+                <div class="form-group">
+                    <label for="customization">Customization Details:</label>
+                    <textarea id="customization"  rows="4" placeholder="Enter any customization details here" name="customization"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="delivery-date">Preferred Delivery Date:</label>
+                    <input type="date" id="delivery-date" name="delivery_date" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="add-to-cart-btn" value="Register" >Order</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">Custom Cakes</a></li>
+                        <li><a href="#">Cupcakes</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://wa.me/9042048800"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://x.com/jinofin__sam"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/jinofin_sam"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@jsbeyblade6731"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/order1.js' %}"></script>  
+</body>
+</html>
+
+

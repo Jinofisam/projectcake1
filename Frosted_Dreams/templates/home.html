@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/home_page.css' %}">
+    <style>
+        body {
+            background-image: url("{% static 'image/bg2.jpg' %}");
+        }
+        .home {
+            background-image: url("{% static 'image/bghome.png' %}");
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="{% static 'image/Logo(FD2).png.png' %}" alt="" width="200px">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#Blogs">Blogs</a></li>
+                <li><a href="#review">Reviews</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+
+            <a href="login/" class="sign-in">Sign up</a>
+    </header>
+
+    <section class="home" id="home">
+        <div class="homecontent">
+            <h2>Cake that everyone loves.</h2>
+            <p>Cake: a delightful indulgence for any occasion.</p>
+            <div class="home-btn"><button>More</button></div>
+        </div>
+    </section>
+
+    <section class="product" id="product">
+        <div class="heading search-container">
+            <h2>Bespoke Cake Designs</h2>
+            <div class="search-box">
+                <input type="text" placeholder="Search products..." id="product-search" oninput="showSuggestions()">
+                <button onclick="searchProducts()">Search</button>
+                <div class="suggestions" id="suggestions"></div>
+                <div class="recent-searches" id="recent-searches"></div>
+            </div>
+        </div>
+        <div class="product-row">
+            <div class="box">
+                <div class="img">
+                    <img src="{% static 'image/CAKEpro (10).png' %}" alt="">
+                </div>
+                <div class="product-content">
+                    <h3>Chocolate Cake</h3>
+                    <p>"Indulge in the magic of chocolate cake, where every bite is pure bliss."</p>
+                    <div class="order">
+                        <a href="#popup1"><button>Order now</button></a>
+                    </div>
+                </div>
+            </div>
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h4>Kindly log in to continue with your cake order.</h4>
+                    <a class="close" href="#product">×</a>
+                    <div class="button1">
+                       <a href="login/"><button>signup</button></a> 
+                    </div>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="img">
+                    <img src="{% static 'image/CAKEpro (9).png' %}" alt="">
+                </div>
+                <div class="product-content">
+                    <h3>Vanilla cake</h3>
+                    <p>"Indulge in the magic of vanilla cake, where every bite is pure elegance."</p>
+                    <div class="order">
+                        <a href="#popup1"><button>Order now</button></a>
+                    </div>
+                </div>
+            </div>
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h4>Kindly log in to continue with your cake order.</h4>
+                    <a class="close" href="#product">×</a>
+                    <div class="button1">
+                       <a href="login/"><button>signup</button></a> 
+                    </div>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="img">
+                    <img src="{% static 'image/CAKEpro (8).png' %}" alt="">
+                </div>
+                <div class="product-content">
+                    <h3>Icing cake</h3>
+                    <p>"Indulge in the magic of icing cake, where every bite is a sweet delight."</p>
+                    <div class="order">
+                        <a href="#popup1"><button>Order now</button></a>
+                    </div>
+                </div>
+            </div>
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h4>Kindly log in to continue with your cake order.</h4>
+                    <a class="close" href="#product">×</a>
+                    <div class="button1">
+                       <a href="login/"><button>signup</button></a> 
+                    </div>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="img">
+                    <img src="{% static 'image/cakegg.png' %}" alt="">
+                </div>
+                <div class="product-content">
+                    <h3>Cup Cake's</h3>
+                    <p>"Indulge in the magic of cupcakes, where every bite is a tiny treasure of joy."</p>
+                    <div class="order">
+                        <a href="#popup1"><button>Order now</button></a>
+                    </div>
+                </div>
+            </div>
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h4>Kindly log in to continue with your cake order.</h4>
+                    <a class="close" href="#product">×</a>
+                    <div class="button1">
+                       <a href="login/"><button>signup</button></a> 
+                    </div>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="img">
+                    <img src="{% static 'image/cakeggg.png' %}" alt="">
+                </div>
+                <div class="product-content">
+                    <h3>Mirror Glaze Cake</h3>
+                    <p>"Indulge in the magic of mirror glaze cake, where every bite is a glossy masterpiece."</p>
+                    <div class="order">
+                        <a href="#popup1"><button>Order now</button></a>
+                    </div>
+                </div>
+            </div>
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h4>Kindly log in to continue with your cake order.</h4>
+                    <a class="close" href="#product">×</a>
+                    <div class="button1">
+                       <a href="login/"><button>signup</button></a> 
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+
+    <section class="Blogs" id="Blogs">
+        <div class="c-heading">
+            <h2>Our Blogs</h2>
+        </div>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'image/IMAGE NARUTO 1.jpg' %}" class="d-block w-100" alt="..." height="600px">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>ORAIO CAKE NARUTO EDITION</h5>
+                        <p>LAUNCH DATE:02/10/2024</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'image/IMAGE POKEMON 2.jpg' %}" class="d-block w-100" alt="..." height="600px">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>NEW LAUNCH POKEMON EDITION</h5>
+                        <p>LAUNCH DATE:09/10/2024</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'image/IMAGE NARUTO 3.jpg' %}" class="d-block w-100" alt="..." height="600px">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>HOMEMADE NARUTO CAKE</h5>
+                        <p>LAUNCH DATE:11/10/2024</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="review" id="review">
+        <h2>Hear from Our Happy Clients</h2>
+        <div class="review-row">
+            <div class="review-box">
+                <div class="review-img">
+                    <img src="{% static 'image/review66.png' %}" alt="">
+                </div>
+                <div class="review-content">
+                    <h3>James W</h3>
+                    <p>"Absolutely Delicious! The chocolate cake was moist and rich, and the frosting was divine. It was a hit at our party! Highly recommend this website for all cake lovers!"</p>
+                </div>
+            </div>
+            <div class="review-box">
+                <div class="review-img">
+                    <img src="{% static 'image/review11.png' %}" alt="">
+                </div>
+                <div class="review-content">
+                    <h3>Daniel T</h3>
+                    <p>"Perfect for Every Occasion! Ordered a custom birthday cake, and The design was beautiful, and the taste was even better. Will order again!"</p>
+                </div>
+            </div>
+            <div class="review-box">
+                <div class="review-img">
+                    <img src="{% static 'image/review22.png' %}" alt="">
+                </div>
+                <div class="review-content">
+                    <h3>Andrew C</h3>
+                    <p>"Best Cake Ever! I've tried many cakes, but the red velvet cake from this site is unmatched. Soft, creamy, and perfectly sweet. My new go-to cake shop!"</p>
+                </div>
+            </div>
+            <div class="review-box">
+                <div class="review-img">
+                    <img src="{% static 'image/review33.png' %}" alt="">
+                </div>
+                <div class="review-content">
+                    <h3>Matthew L</h3>
+                    <p>"Amazing Customer Service! I had a last-minute order, and they delivered on time with a smile. The cake was fresh and delicious. Fantastic experience!"</p>
+                </div>
+            </div>
+            <div class="review-box">
+                <div class="review-img">
+                    <img src="{% static 'image/review44.png' %}" alt="">
+                </div>
+                <div class="review-content">
+                    <h3>Christopher N</h3>
+                    <p>"A Sweet Surprise! The cupcakes were perfect! Beautifully decorated and tasted just as good as they looked. Definitely ordering again."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Online Shop</h4>
+                    <ul>
+                        <li><a href="#">Custom Cakes</a></li>
+                        <li><a href="#">Cupcakes</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://wa.me/message/HYLD2R5CVSTUF1"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://x.com/jinofin__sam"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/jinofin_sam"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@jsbeyblade6731"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{% static 'js/home_page.js' %}"></script>
+</body>
+</html>

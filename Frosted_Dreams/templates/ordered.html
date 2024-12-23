@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Successful</title>
+    {% load static %}   
+    <link rel="stylesheet" href="{% static 'css/ordered.css' %}">
+</head>
+<body>
+    <header>
+        <a href="/">Home</a>
+        <a href="/">Orders</a>
+        <a href="#footer">Contact</a>
+    </header>
+
+    <main class="container">
+        <section class="order-success">
+            <h1 class="title">Order Successful!</h1>
+            <p class="lead">Thank you for your order!</p>
+            <div class="order-details">
+                <p><strong>Cake Name:</strong> {{ users.0.cake_name }}</p> 
+                <p><strong>Quantity:</strong> {{ users.0.quantity }}</p>
+                <p><strong>Price per cake:</strong> RS {{ users.0.price }}</p>
+                <p><strong>Customization:</strong> {{ users.0.customization }}</p>
+                <p><strong>Preferred Delivery Date:</strong> {{ users.0.delivery_date }}</p>
+                <p><strong>Total Price:</strong> RS {{ total_price }}</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>For online payment <a href="https://wa.me/message/HYLD2R5CVSTUF1">whatsapp.com</a></p>
+    </footer>
+</body>
+</html>
